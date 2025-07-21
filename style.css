@@ -8,7 +8,7 @@ border-width: 5px;
 .para2{
 color: rgb(215, 91, 13);
 font-size: 24px;
-/* border-style: dotted; */
+border-style: dotted;
 border: 2px double red;
 border-radius: 15px;
 padding-left: 5px;
@@ -17,7 +17,7 @@ padding-left: 5px;
 
 .para3{
 border: 5px double aqua;
-/* font-size: 24px; */
+font-size: 24px;
 border-style: double;
 padding-left: 12px;
 }
