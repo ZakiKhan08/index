@@ -1,23 +1,48 @@
-#para1{
-color: rgb(6, 172, 23);
-font-size: 24px;
-border-style: dashed;
-border-width: 5px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.para2{
-color: rgb(215, 91, 13);
-font-size: 24px;
-border-style: dotted;
-border: 2px double red;
-border-radius: 15px;
-padding-left: 5px;
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:150px;
+    padding: 10px 20px;
+    border: 2px solid #FA8C00;
+    border-radius: 50px;
+    background: transparent;
+    color:#ffffff;
+    font-size: 16px;
+    overflow:hidden;
+    cursor: pointer;
+    transition: color 1s linear;
+}
+button::after{
+    content:'';
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width:140px;
+    height:0;
+    background: #FA8C00;
+    z-index: -1;
+    transition: all 2s linear;
+    pointer-events:none;
 
 }
-
-.para3{
-border: 5px double aqua;
-font-size: 24px;
-border-style: double;
-padding-left: 12px;
+button:hover::after{
+    height:350px;
+}
+button:hover{
+    color:black;
 }
