@@ -5,10 +5,37 @@
 }
 body{
     height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: rgb(206, 87, 87); */
+}
+
+#navbar{
+background-color: black;
+width: 100%;
+height: 8vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+}
+#navbar img{
+    width: 30px;
+    height: 30px;
+}
+
+#navbar a{
+/* display: flex; */
+
+}
+
+#navbar .u{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+    justify-content: space-between;
+    
+    background-color: aqua;
 }
 button{
     display: flex;
@@ -44,5 +71,5 @@ button:hover::after{
     height:350px;
 }
 button:hover{
-    color:black;
+    color:rgb(158, 195, 25);
 }
