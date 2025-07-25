@@ -1,107 +1,69 @@
-/* Reset default spacing and ensure consistent box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Ensures padding and borders don't overflow */
-}
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* box-sizing property eliminates the scrollbars width/height */
+ }
 
-/* Parent container */
-#parent {
-  border: 8px double green;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: url(./images/wp4866150.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 0 20px; /* Replaces large left/right margins */
-  gap: 20px;
-}
-
-/* Common child card style */
-.child_1, .child_2, .child_3 {
-  border: 8px double rgb(8, 52, 75);
-  border-radius: 15px;
-  width: 20%;
-  height: 65vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: white;
-}
-
-/* Individual spacing (optional, if still needed) */
-.child_1 {
-  /* margin-left: 120px; --> replaced by #parent padding */
-}
-.child_3 {
-  /* margin-right: 120px; --> replaced by #parent padding */
-}
-
-/* Image container */
-.child_1a, .child_2a, .child_3a {
-  height: 30%;
-}
-
-.child_1_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-
-/* Text container */
-.child_1b, .child_2b, .child_3b {
-  background-color: rgb(151, 229, 229);
-  flex: 1;
-  padding: 10px;
-  font-size: 14px;
-  text-align: justify;
-  line-height: 1.4;
-  overflow-y: auto;
-}
-
-/* Rank section */
-.child_1c, .child_2c, .child_3c {
-  background-color: rgb(225, 18, 184);
-  color: aliceblue;
-  height: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  font-weight: bold;
-}
-
-/* Optional: Responsive behavior */
-@media (max-width: 1024px) {
-  #parent {
-    flex-direction: column;
-    height: auto;
-    padding: 40px 20px;
+ #parent {
+   /* border: 8px double green; */
+   height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   /* background-color:rgb(244, 241, 241); */
+   background-image: url(./images/wp4866150.jpg);
+   /* gap: 170px; */
+   padding-left: 120px;
+padding-right: 120px; 
   }
 
-  .child_1, .child_2, .child_3 {
-    width: 90%;
-    height: auto;
-  }
+ .child_1_img {
+   width: 100%;
+   height: 100%;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
 
-  .child_1c, .child_2c, .child_3c {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 0;
-  }
-}
+ }
 
-/* Hover effect - uncomment to activate card animation */
+ .child_1, .child_2, .child_3 {
+   border: 8px double rgb(8, 52, 75);
+   border-radius: 15px;
+   width: 20%;
+   height: 450px;
+   overflow: hidden;
+display: grid;
+
+ }
+
+ .child_1a, .child_2a, .child_3a {
+   width: auto;
+  
+ }
+
+ .child_1b, .child_2b, .child_3b {
+   background-color: rgb(151, 229, 229);
+/* height: 250px; */
+text-align: justify;
+/* line-height: 1.4; */
+overflow: auto;
+
+ }
+
+ .child_1c, .child_2c, .child_3c {
+   background-color: rgb(225, 18, 184);
+   color: aliceblue;
+   height: 40px;
+   display: flex;
+   justify-content: space-evenly;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+
+
+ }
 
 .child_1:hover, .child_2:hover, .child_3:hover {
-  box-shadow: 2px 2px 10px black;
+  box-shadow: 3px 3px 12px rgb(126, 190, 200);
   transform: translateY(-10px);
   transition: 0.3s ease-in-out;
 }
-
